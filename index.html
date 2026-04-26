@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sakuradev — Indie apps for Windows & Android</title>
+<meta name="description" content="Apps by sakuradev: ChargeCast, AudioFixer, NotiKeep, Split Screen Launcher. Independent software for Windows and Android.">
+<meta property="og:title" content="sakuradev — Indie apps for Windows & Android">
+<meta property="og:description" content="Apps by sakuradev: ChargeCast, AudioFixer, NotiKeep, Split Screen Launcher.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://sakuradevjp.github.io/">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#4a4a5e;
+  --accent:#ff4757;
+  --card:#f7f7fb;
+  --border:#e6e6ee;
+  --shadow:0 8px 24px rgba(26,26,46,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14141c;
+    --fg:#f2f2f5;
+    --fg-soft:#b0b0c0;
+    --accent:#ff6b7a;
+    --card:#1d1d28;
+    --border:#2a2a38;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+header.hero{text-align:center;padding:3rem 0 2.5rem}
+header.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.2;margin:0 0 .5rem;letter-spacing:-.02em;font-weight:800}
+header.hero h1 .dot{color:var(--accent)}
+header.hero .tagline{font-size:1.1rem;color:var(--fg-soft);margin:0}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin:2rem 0}
+.app{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.app:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.app .icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1rem}
+.app.chargecast .icon{background:linear-gradient(135deg,#ff3344,#ff7080);color:#fff}
+.app.audiofixer .icon{background:linear-gradient(135deg,#7c4dff,#536dfe);color:#fff}
+.app.notikeep .icon{background:linear-gradient(135deg,#26c281,#1abc9c);color:#fff}
+.app.splitscreen .icon{background:linear-gradient(135deg,#ff9a3c,#ff6b35);color:#fff}
+.app h2{font-size:1.3rem;margin:0 0 .5rem;font-weight:700}
+.app .platform{font-size:.85rem;color:var(--fg-soft);margin:0 0 .75rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.app p.desc{margin:0 0 1.25rem;color:var(--fg-soft);font-size:.95rem;flex-grow:1}
+.app .links{display:flex;gap:.5rem;flex-wrap:wrap}
+.app .links a{display:inline-flex;align-items:center;gap:.35rem;padding:.5rem .9rem;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:600;transition:transform .1s,background .15s}
+.app .links a.primary{background:var(--accent);color:#fff}
+.app .links a.primary:hover{transform:translateY(-1px)}
+.app .links a.secondary{background:transparent;color:var(--fg);border:1px solid var(--border)}
+.app .links a.secondary:hover{border-color:var(--accent);color:var(--accent)}
+.app .links a.disabled{background:transparent;color:var(--fg-soft);border:1px dashed var(--border);cursor:not-allowed;pointer-events:none}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>sakuradev<span class="dot">.</span></h1>
+  <p class="tagline">Independent apps for Windows &amp; Android.</p>
+</header>
+
+<section class="apps">
+
+  <article class="app chargecast">
+    <div class="icon">🎮</div>
+    <p class="platform">Windows · Microsoft Store</p>
+    <h2>ChargeCast</h2>
+    <p class="desc">Stream Android games to PC via USB. No capture card. Stays charged the whole time.</p>
+    <div class="links">
+      <a class="primary" href="https://apps.microsoft.com/detail/9n87x47v634v">Get on Store</a>
+      <a class="secondary" href="https://sakuradevjp.github.io/ChargeCast-notes/">Docs</a>
+    </div>
+  </article>
+
+  <article class="app audiofixer">
+    <div class="icon">🔊</div>
+    <p class="platform">Windows · Microsoft Store</p>
+    <h2>AudioFixer</h2>
+    <p class="desc">Lossless video volume booster. Normalize and amplify audio without re-encoding.</p>
+    <div class="links">
+      <a class="primary" href="https://apps.microsoft.com/detail/9nkn2q9svrs1">Get on Store</a>
+      <a class="disabled">Docs (soon)</a>
+    </div>
+  </article>
+
+  <article class="app notikeep">
+    <div class="icon">📱</div>
+    <p class="platform">Android · Google Play</p>
+    <h2>NotiKeep</h2>
+    <p class="desc">Save every notification, photos included. Ad-free, all data stays on-device.</p>
+    <div class="links">
+      <a class="primary" href="https://play.google.com/store/apps/details?id=jp.sakuradev.notikeep">Get on Play</a>
+      <a class="secondary" href="https://sakuradevjp.github.io/notikeep-notes/">Docs</a>
+    </div>
+  </article>
+
+  <article class="app splitscreen">
+    <div class="icon">⊞</div>
+    <p class="platform">Android · Google Play</p>
+    <h2>Split Screen Launcher</h2>
+    <p class="desc">App pair tool that still works on Android 15 &amp; 16. No ads, no Accessibility permission, 2.8 MB.</p>
+    <div class="links">
+      <a class="primary" href="https://play.google.com/store/apps/details?id=com.ryodev.splitscreen">Get on Play</a>
+      <a class="secondary" href="https://sakuradevjp.github.io/split-screen-launcher-notes/">Docs</a>
+    </div>
+  </article>
+
+</section>
+
+<footer>
+  <p>Built by <a href="https://github.com/sakuradevjp">sakuradev</a>.</p>
+</footer>
+
+</div>
+</body>
+</html>
