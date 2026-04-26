@@ -1,1 +1,5 @@
 .indexnow-key
+
+# Claude Code: keep local-only, never upload
+CLAUDE.md
+.claude/
