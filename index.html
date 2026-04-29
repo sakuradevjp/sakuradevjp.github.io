@@ -125,7 +125,8 @@ header.hero .tagline{font-size:1.1rem;color:var(--fg-soft);margin:0}
 .app.audiofixer .icon{background:linear-gradient(135deg,#7c4dff,#536dfe);color:#fff}
 .app.notikeep .icon{background:linear-gradient(135deg,#26c281,#1abc9c);color:#fff}
 .app.splitscreen .icon{background:linear-gradient(135deg,#ff9a3c,#ff6b35);color:#fff}
-.app.oldclock .icon{background:linear-gradient(135deg,#2a6661,#1f4e4a);color:#f5f1e8}
+.app.oldclock .icon{background:linear-gradient(135deg,#2a6661,#1f4e4a);padding:8px}
+.app.oldclock .icon img{width:100%;height:100%;display:block;border-radius:50%;background:#fff}
 .side-heading{text-align:center;margin:3.5rem 0 .5rem;font-size:1.1rem;font-weight:600;color:var(--fg-soft);letter-spacing:.08em;text-transform:uppercase}
 .side-sub{text-align:center;color:var(--fg-soft);margin:0 0 1.25rem;font-size:.95rem}
 .side-sub::before,.side-sub::after{content:"·";margin:0 .5rem;color:var(--border)}
@@ -207,7 +208,7 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 <section class="apps">
 
   <article class="app oldclock">
-    <div class="icon">🕰</div>
+    <div class="icon"><img src="old-clock-calendar.png" alt="Old Clock Calendar icon" width="48" height="48"></div>
     <p class="platform">Windows · Hobby Project</p>
     <h2>Old Clock Calendar</h2>
     <p class="desc">A Showa-era classroom blackboard reimagined as a desktop widget. Analog clock, Japanese calendar, ambient nostalgia.</p>
