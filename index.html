@@ -120,13 +120,8 @@ header.hero .tagline{font-size:1.1rem;color:var(--fg-soft);margin:0}
 .apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin:2rem 0}
 .app{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
 .app:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.app .icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:1rem}
-.app.chargecast .icon{background:linear-gradient(135deg,#ff3344,#ff7080);color:#fff}
-.app.audiofixer .icon{background:linear-gradient(135deg,#7c4dff,#536dfe);color:#fff}
-.app.notikeep .icon{background:linear-gradient(135deg,#26c281,#1abc9c);color:#fff}
-.app.splitscreen .icon{background:linear-gradient(135deg,#ff9a3c,#ff6b35);color:#fff}
-.app.oldclock .icon{background:linear-gradient(135deg,#2a6661,#1f4e4a);padding:8px}
-.app.oldclock .icon img{width:100%;height:100%;display:block;border-radius:50%;background:#fff}
+.app .icon{width:64px;height:64px;border-radius:14px;margin-bottom:1rem;overflow:hidden;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.app .icon img{width:100%;height:100%;display:block;object-fit:cover}
 .side-heading{text-align:center;margin:3.5rem 0 .5rem;font-size:1.1rem;font-weight:600;color:var(--fg-soft);letter-spacing:.08em;text-transform:uppercase}
 .side-sub{text-align:center;color:var(--fg-soft);margin:0 0 1.25rem;font-size:.95rem}
 .side-sub::before,.side-sub::after{content:"·";margin:0 .5rem;color:var(--border)}
@@ -157,7 +152,7 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 <section class="apps">
 
   <article class="app chargecast">
-    <div class="icon">🎮</div>
+    <div class="icon"><img src="chargecast.png" alt="ChargeCast icon" width="64" height="64"></div>
     <p class="platform">Windows · Microsoft Store</p>
     <h2>ChargeCast</h2>
     <p class="desc">Stream Android games to PC via USB. No capture card. Stays charged the whole time.</p>
@@ -168,7 +163,7 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
   </article>
 
   <article class="app audiofixer">
-    <div class="icon">🔊</div>
+    <div class="icon"><img src="audiofixer.png" alt="AudioFixer icon" width="64" height="64"></div>
     <p class="platform">Windows · Microsoft Store</p>
     <h2>AudioFixer</h2>
     <p class="desc">Lossless video volume booster. Normalize and amplify audio without re-encoding.</p>
@@ -179,7 +174,7 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
   </article>
 
   <article class="app notikeep">
-    <div class="icon">📱</div>
+    <div class="icon"><img src="notikeep.svg" alt="NotiKeep icon" width="64" height="64"></div>
     <p class="platform">Android · Google Play</p>
     <h2>NotiKeep</h2>
     <p class="desc">Save every notification, photos included. Ad-free, all data stays on-device.</p>
@@ -190,7 +185,7 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
   </article>
 
   <article class="app splitscreen">
-    <div class="icon">⊞</div>
+    <div class="icon"><img src="split-screen-launcher.png" alt="Split Screen Launcher icon" width="64" height="64"></div>
     <p class="platform">Android · Google Play</p>
     <h2>Split Screen Launcher</h2>
     <p class="desc">App pair tool that still works on Android 15 &amp; 16. No ads, no Accessibility permission, 2.8 MB.</p>
@@ -208,7 +203,7 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 <section class="apps">
 
   <article class="app oldclock">
-    <div class="icon"><img src="old-clock-calendar.png" alt="Old Clock Calendar icon" width="48" height="48"></div>
+    <div class="icon"><img src="old-clock-calendar.png" alt="Old Clock Calendar icon" width="64" height="64"></div>
     <p class="platform">Windows · Hobby Project</p>
     <h2>Old Clock Calendar</h2>
     <p class="desc">A Showa-era classroom blackboard reimagined as a desktop widget. Analog clock, Japanese calendar, ambient nostalgia.</p>
