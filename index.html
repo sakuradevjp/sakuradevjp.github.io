@@ -220,7 +220,24 @@ footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
 <footer>
   <p>Built by <a href="https://github.com/sakuradevjp">sakuradev</a>.</p>
+  <p style="margin-top:.5rem">
+    Contact:
+    <a id="contact-link" href="https://github.com/sakuradevjp" data-u="c2FrdXJhLmRldi5qcA==" data-d="Z21haWwuY29t">click to reveal email</a>
+    <noscript> (JavaScript required — or reach out via <a href="https://github.com/sakuradevjp">GitHub</a>)</noscript>
+  </p>
 </footer>
+
+<script>
+(function(){
+  var a=document.getElementById('contact-link');
+  if(!a||!a.dataset.u||!a.dataset.d)return;
+  var addr=atob(a.dataset.u)+String.fromCharCode(64)+atob(a.dataset.d);
+  a.textContent=addr;
+  a.href='mailto:'+addr;
+  a.removeAttribute('data-u');
+  a.removeAttribute('data-d');
+})();
+</script>
 
 </div>
 </body>
