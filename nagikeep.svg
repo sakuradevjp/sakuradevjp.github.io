@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+  <!-- NagiKeep orb — mirrors app/.../drawable/focus_orb.xml (teal orb on near-black ground). -->
+  <defs>
+    <radialGradient id="halo" cx="54" cy="54" r="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#66E0D3" stop-opacity="0.349"/>
+      <stop offset="1" stop-color="#66E0D3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="54" cy="54" r="33" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#66E0D3" stop-opacity="0.922"/>
+      <stop offset="0.6" stop-color="#66E0D3" stop-opacity="0.588"/>
+      <stop offset="1" stop-color="#66E0D3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="108" height="108" fill="#0A0E13"/>
+  <circle cx="54" cy="54" r="52" fill="url(#halo)"/>
+  <circle cx="54" cy="54" r="33" fill="url(#core)"/>
+  <circle cx="54" cy="54" r="33" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1"/>
+</svg>
