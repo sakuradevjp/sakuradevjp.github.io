@@ -24,8 +24,8 @@ SITE = "https://sakuradevjp.github.io/diary"
 
 PRIMARY = "ja"  # 日誌の主言語（本人の声）。LPと違い日本語が正
 LOCALE_META = {
-    "ja": {"lang": "ja", "site_title": "作りながら考えたこと", "site_sub": "sakuradev の開発日誌", "back": "一覧へ", "home": "sakuradev"},
-    "en": {"lang": "en", "site_title": "Notes While Building", "site_sub": "a dev diary by sakuradev", "back": "All entries", "home": "sakuradev"},
+    "ja": {"lang": "ja", "site_title": "作りながら考えたこと", "site_sub": "sakuradev の開発日誌", "back": "目次へ", "home": "sakuradev", "ep": "第{n}話"},
+    "en": {"lang": "en", "site_title": "Notes While Building", "site_sub": "a dev diary by sakuradev", "back": "All episodes", "home": "sakuradev", "ep": "Episode {n}"},
 }
 
 STYLE = """
@@ -41,8 +41,10 @@ header.site { margin-bottom:3em; }
 header.site h1 { font-size:1.05em; font-weight:600; letter-spacing:.04em; }
 header.site p  { font-size:.8em; color:var(--sub); margin-top:.3em; }
 header.site a  { color:inherit; text-decoration:none; }
+article .ep { font-size:.78em; color:var(--sub); letter-spacing:.06em; margin-bottom:.3em; }
 article h2 { font-size:1.15em; font-weight:600; margin-bottom:.2em; letter-spacing:.02em; }
 article time { font-size:.78em; color:var(--sub); display:block; margin-bottom:2.2em; }
+ul.entries .ep { color:var(--sub); font-size:.85em; margin-right:.9em; white-space:nowrap; }
 article p { margin-bottom:1.6em; }
 ul.entries { list-style:none; }
 ul.entries li { border-bottom:1px solid var(--line); }
@@ -99,6 +101,7 @@ def page(locale, num, meta, paras, locales_for_num):
 <main>
 <header class="site"><h1><a href="index.html">{m['site_title']}</a></h1><p>{m['site_sub']}</p></header>
 <article>
+<div class="ep">{m['ep'].format(n=int(num))}</div>
 <h2>{meta['title']}</h2>
 <time datetime="{meta['date']}">{meta['date']}</time>
 {body}
@@ -113,7 +116,7 @@ def page(locale, num, meta, paras, locales_for_num):
 def index(locale, entries):
     m = LOCALE_META[locale]
     items = "\n".join(
-        f'<li><a href="{num}.html"><span>{meta["title"]}</span><time>{meta["date"]}</time></a></li>'
+        f'<li><a href="{num}.html"><span><span class="ep">{m["ep"].format(n=int(num))}</span>{meta["title"]}</span><time>{meta["date"]}</time></a></li>'
         for num, meta in sorted(entries.items(), reverse=True)
     )
     return f"""<!DOCTYPE html>
