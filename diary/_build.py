@@ -117,7 +117,7 @@ def index(locale, entries):
     m = LOCALE_META[locale]
     items = "\n".join(
         f'<li><a href="{num}.html"><span><span class="ep">{m["ep"].format(n=int(num))}</span>{meta["title"]}</span><time>{meta["date"]}</time></a></li>'
-        for num, meta in sorted(entries.items(), reverse=True)
+        for num, meta in sorted(entries.items())
     )
     return f"""<!DOCTYPE html>
 <html lang="{m['lang']}">
