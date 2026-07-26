@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>作りながら考えたこと — sakuradev の開発日誌</title>
-<link rel="canonical" href="https://sakuradevjp.github.io/diary/ja/">
+<title>開くボタンは、約束やと思ってた — 作りながら考えたこと</title>
+<link rel="canonical" href="https://sakuradevjp.github.io/diary/ja/004.html">
+
 <link rel="icon" type="image/png" href="../../avatar.png">
 <style>
 :root { --fg:#2a2a2a; --bg:#fdfcfa; --sub:#8a8a8a; --line:#e8e4de; --link:#a0525f; }
@@ -37,14 +38,19 @@ nav.foot a:hover { color:var(--link); }
 </head>
 <body>
 <main>
-<header class="site"><h1>作りながら考えたこと</h1><p>sakuradev の開発日誌</p></header>
-<ul class="entries">
-<li><a href="001.html"><span><span class="ep">第1話</span>通知を保存したかった</span><time>2026-07-20</time></a></li>
-<li><a href="002.html"><span><span class="ep">第2話</span>最初の日</span><time>2026-07-21</time></a></li>
-<li><a href="003.html"><span><span class="ep">第3話</span>通知の整理と思い出と</span><time>2026-07-24</time></a></li>
-<li><a href="004.html"><span><span class="ep">第4話</span>開くボタンは、約束やと思ってた</span><time>2026-07-26</time></a></li>
-</ul>
-<nav class="foot"><a href="https://sakuradevjp.github.io/">sakuradev</a></nav>
+<header class="site"><h1><a href="index.html">作りながら考えたこと</a></h1><p>sakuradev の開発日誌</p></header>
+<article>
+<div class="ep">第4話</div>
+<h2>開くボタンは、約束やと思ってた</h2>
+<time datetime="2026-07-26">2026-07-26</time>
+<p>通知には、元のアプリの中身が乗ってくる。Instagramならリールや写真、YouTubeなら再生してた動画。だから保存した通知をタップしたら、その中身がそのまま開く。そう思ってた。ずっとそこにある、永続的な何か。当たり前やろ、と。</p>
+<p>そこで、Googleの壁が現れた。</p>
+<p>通知に埋め込まれた「開く」の合図には、期限があった。時間が経つと、静かに失効する。タップしても、もう何も開かない。保存はできてるのに、開くボタンだけが死んでる。</p>
+<p>開くボタンは、ユーザーとの約束やと思ってた。タップしたら開く。開かへんかったら、それは裏切りやろ。</p>
+<p>そこからしばらく、失効した合図をアプリ側からなんとか叩き起こせへんか、それをずっとやってた。何が起きてるのか知りたくて、通知が来るたびに中身をログに取って、いつ、どう消えるのかを見ていった。</p>
+<p>作りたい体験は、はっきりしてた。ただ、Androidはそう簡単にはやらせてくれへん。ずっともやもやしてた。</p>
+</article>
+<nav class="foot"><a href="index.html">目次へ</a><a href="https://sakuradevjp.github.io/">sakuradev</a></nav>
 </main>
 </body>
 </html>
