@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三流で終わるな — 作りながら考えたこと</title>
+<link rel="canonical" href="https://sakuradevjp.github.io/diary/ja/005.html">
+
+<link rel="icon" type="image/png" href="../../avatar.png">
+<style>
+:root { --fg:#2a2a2a; --bg:#fdfcfa; --sub:#8a8a8a; --line:#e8e4de; --link:#a0525f; }
+@media (prefers-color-scheme: dark) {
+  :root { --fg:#d8d4ce; --bg:#17181a; --sub:#7a7a7a; --line:#2c2e31; --link:#c98a95; }
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--fg); font-family:"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+       line-height:2.0; font-size:16px; }
+main { max-width:38em; margin:0 auto; padding:3.5em 1.4em 5em; }
+header.site { margin-bottom:3em; }
+header.site h1 { font-size:1.05em; font-weight:600; letter-spacing:.04em; }
+header.site p  { font-size:.8em; color:var(--sub); margin-top:.3em; }
+header.site a  { color:inherit; text-decoration:none; }
+article .ep { font-size:.78em; color:var(--sub); letter-spacing:.06em; margin-bottom:.3em; }
+article h2 { font-size:1.15em; font-weight:600; margin-bottom:.2em; letter-spacing:.02em; }
+article time { font-size:.78em; color:var(--sub); display:block; margin-bottom:2.2em; }
+ul.entries .ep { color:var(--sub); font-size:.85em; margin-right:.9em; white-space:nowrap; }
+article p { margin-bottom:1.6em; }
+ul.entries { list-style:none; }
+ul.entries li { border-bottom:1px solid var(--line); }
+ul.entries a { display:flex; justify-content:space-between; gap:1em; padding:1em .1em;
+               color:inherit; text-decoration:none; }
+ul.entries a:hover { color:var(--link); }
+ul.entries time { color:var(--sub); font-size:.8em; white-space:nowrap; align-self:center; }
+nav.foot { margin-top:4em; font-size:.85em; }
+nav.foot a { color:var(--sub); text-decoration:none; margin-right:1.6em; }
+nav.foot a:hover { color:var(--link); }
+</style>
+</head>
+<body>
+<main>
+<header class="site"><h1><a href="index.html">作りながら考えたこと</a></h1><p>sakuradev の開発日誌</p></header>
+<article>
+<div class="ep">第5話</div>
+<h2>三流で終わるな</h2>
+<time datetime="2026-08-02">2026-08-02</time>
+<p>保存した通知をタップしたら、その中身が開く。やりたいのは、それだけやった。</p>
+<p>YouTubeの通知が残ってる。タップする。さっき見てた動画が開く。当たり前のことのはずやのに、これがなかなかできひんかった。</p>
+<p>Androidの通知には、本文やアイコンと一緒に、アプリを開くためのオブジェクトが乗ってくる。タップしたら元のアプリが開くのは、こいつのおかげ。</p>
+<p>前に書いたのは、そのオブジェクトに有効期限のようなものが設定されてる、という話。時間が経つと切れて、押しても何も開かんようになる。</p>
+<p>あれとは別に、もう一枚、壁があった。</p>
+<p>期限の切れてない、生きてるオブジェクトでも、開かへんのよ。渡す処理はちゃんと最後まで通る。そこは動いてる。なのにアプリが前に出てこない。裏で動いてるやつが勝手に画面を開くな、とAndroidが止めてくる。</p>
+<p>しかも中途半端に動く。タップすると画面がちらっと動いて、結局YouTubeのトップ画面が開く。見たかった動画とちゃう。</p>
+<p>しかたなく、0.5秒待ってから別の道で開き直す、という逃げ道を書いた。開くのは「うまくいったらラッキー」の扱いに格下げした。作りたかったのはそれとちゃうやろ、と思いながら、しばらくそのまま使ってた。</p>
+<p>二月七日。もう一回向き合って、結局「これはAndroidの制限やから、どうにもならん」で終わりかけた。</p>
+<p>その日の記録の、教訓のところにこう書いてある。</p>
+<p>三流で終わるな。</p>
+<p>で、もう一回調べた。そしたら、あった。</p>
+<p>そのオブジェクトをAndroidに渡すときに、「これは開いてええやつです」と一言添える書き方が、ちゃんと用意されてた。勝手に開こうとしてるんちゃう、と先に言うてしまえばよかっただけやった。</p>
+<p>その一言を足したら、通知バーからタップしたときと同じ開き方が、全部のアプリで動いた。</p>
+<p>しのぐために書いた92行を、全部消した。</p>
+<p>同じ日の教訓に、こうも書いてる。「対処できない、と安易に断言しない」「諦めかけた時こそ調べる」。</p>
+</article>
+<nav class="foot"><a href="index.html">目次へ</a><a href="https://sakuradevjp.github.io/">sakuradev</a></nav>
+</main>
+</body>
+</html>
